@@ -28,7 +28,7 @@
             <nav class="flex flex-wrap items-center justify-start text-base ">
                 <ul class="items-center inline-block list-none lg:inline-flex">
                     <li>
-                        <a href="#"
+                        <a href="#pricing"
                            class="px-4 py-1 mr-1 text-base text-blueGray-500 transition duration-500 ease-in-out transform rounded-md focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 hover:text-black ">Pricing</a>
                     </li>
                     <li>
@@ -171,7 +171,7 @@
     </div>
 </div>
 
-<section class="text-blueGray-700 ">
+<section class="text-blueGray-700 " id="pricing">
     <div class="container items-center px-5 py-12 lg:px-16">
         <div class="flex flex-wrap items-center justify-center w-full gap-4">
             <div class="w-full xl:w-1/4 md:w-2/6">
