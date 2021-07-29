@@ -27,5 +27,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('tasks', \App\Http\Controllers\TaskController::class);
     Route::view('/contact', 'contact')->name('contact');
 });
-Route::get('invitation/{user}',[\App\Http\Controllers\TaskController::class,'invitation'])->name('invitation');
+Route::get('invitation/{user}', [\App\Http\Controllers\TaskController::class, 'invitation'])->name('invitation');
 require __DIR__ . '/auth.php';

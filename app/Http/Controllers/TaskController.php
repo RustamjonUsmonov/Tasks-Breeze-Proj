@@ -96,7 +96,7 @@ class TaskController extends Controller
     public function invitation(User $user)
     {
         if (!request()->hasValidSignature()) {
-    abort(401);
+            abort(401);
         }
         auth()->login($user);
         return redirect()->route('dashboard');
