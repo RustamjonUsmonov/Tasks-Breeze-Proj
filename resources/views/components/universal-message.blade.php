@@ -1,7 +1,7 @@
 @props(['text','color','title'])
-<div class="alert flex flex-row items-center bg-{{$color}}-200 p-5 rounded border-b-2 border-{{$color}}-300 py-5 mb-4">
+<div class="alert flex flex-row items-center bg-{{$color}}-200 p-5 rounded border-b-2 border-{{$color}}-300 py-5 mb-4 hover:bg-{{$color}}-300">
     <div
-        class="alert-icon flex items-center bg-{{$color}}-100 border-2 border-{{$color}}-500 justify-center h-10 w-10 flex-shrink-0 rounded-full">
+        class=" transform hover:scale-125 alert-icon flex items-center bg-{{$color}}-100 border-2 border-{{$color}}-500 justify-center h-10 w-10 flex-shrink-0 rounded-full">
 				<span class="text-{{$color}}-500">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
