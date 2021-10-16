@@ -42,19 +42,19 @@ class TaskController extends Controller
      */
     public function store(StoreTaskRequest $request): RedirectResponse
     {
-        Task::create($request->all());
+        Task::create($request->validated());
         return redirect()->route('tasks.index')->with('message', 'Task created successfully');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param int $taskId
+     * @param Task $task
      * @return Application|Factory|View
      */
-    public function show(int $taskId)
+    public function show(Task $task)
     {
-        return view('tasks.show', ['task' => Task::findOrFail($taskId)]);
+        return view('tasks.show', compact('task'));
     }
 
     /**
@@ -77,19 +77,19 @@ class TaskController extends Controller
      */
     public function update(UpdateTaskRequest $request, Task $task)
     {
-        $task->update($request->all());
+        $task->update($request->validated());
         return redirect()->route('tasks.index')->with('message', 'Task updated successfully');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param int $id
+     * @param Task $task
      * @return RedirectResponse
      */
-    public function destroy(int $id): RedirectResponse
+    public function destroy(Task $task): RedirectResponse
     {
-        Task::destroy($id);
+        $task->delete();
         return redirect()->route('tasks.index')->with('message', 'Task deleted successfully');
     }
 
